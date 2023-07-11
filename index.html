@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rowan Gingras</title>
+<style>
+    :root {
+        --purple: #421867;
+    }
+    
+    body {
+        font-family: Lato, sans-serif;
+        margin: 0;
+    }
+
+    h1, h2, h3 {
+        color: var(--purple);
+        padding: 0;
+        margin: 0;
+        text-indent: 0;
+    }
+
+    h1 {
+        font-size: 45px;
+        font-weight: 300; /*light font weight*/
+    }
+
+    h2 {
+        font-weight: normal;
+    }
+
+    p {
+        line-height: 25px;
+        
+    }
+
+    button {
+        font-family: Lato, sans-serif;
+    }
+    
+    li {
+        display: inline-block;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+    
+    .navbar {
+        background-color: var(--purple);
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        z-index: 100;
+    }
+    
+    .navbar a {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.85;
+        font-size: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .navbar a:hover {
+    	opacity: 1;
+        
+    }
+    
+    .home {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    section {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 30px;
+    }
+    
+    .intro {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        padding: 0;
+    }
+    
+    .infoContent {
+        padding: 20px;
+    }
+    
+    .profilePic img {
+        height: 100%;
+        
+    }
+    
+    .positionStatement {
+        background-color: var(--purple);
+        color: #fff;
+    }
+    
+    .rowEmail {
+        padding: 5px;
+        background-color: var(--purple);
+        color: #fff;
+        border: 3px solid var(--purple);
+        font-size: 23px;
+        border-radius: 25px;
+        width: fit-content;
+        cursor: pointer;
+    }
+
+    .rowEmail:hover {
+        background-color: #fff;
+        color: var(--purple);
+        transition: 0.3s;
+    }
+
+    .round {
+        border-radius: 50%;
+        overflow: hidden; /* Ensures the image stays within the circle */
+        width: 348px;
+        height: 348px;
+        margin: 0 auto; /* Centers the image horizontally */
+    }
+
+    .round img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+</style>
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <li><a href="/matrix">Classroom Matrix</a></li>
+        <li><a href="/routines">Classroom Routines</a></li>
+        <li><a href="/continuum">Continuum of Consequences</a></li>
+        <li><a href="/plan">Plans</a></li>
+        <li><a href="/other">Other</a></li>
+    </ul>
+</div>
+<section class="intro">
+    <div class="infoContent">
+        <h1>Hi, I'm<h1 style="font-weight: normal">Rowan Gingras.</h1></h1>
+        <p>I will be graduating from the University of Maine in 2024 with dual degrees in English and Secondary Education. Through college, I've worked as a Behavioral Health Professional, working one-on-one with disabled children to help them meet their goals and live more independent lives. My experience has given me a unique understanding of the struggles adolescents, both disabled and not, experience in the classroom. This website will show my comprehensive classroom management plan-- how I approach classroom routines, lesson plans, and contingencies for disruptive behaviors.</p>
+        <h2>Get in touch at <span class="rowEmail" onclick="sendEmail()">rowanjgingras@gmail.com</span></h2>
+    </div>
+    <div class="profilePic" >
+        <img src="https://lh6.googleusercontent.com/gUBzdKjY4IFazHu6bOCxe5FQKw7VPKIX9E8LP0JvQiJZVxeEBolnXYJ01ZpjsQgKD8KoN3NaQWy2KxlhlMwArMPecvSi_d8yeLghyc4T849eyLgKbWXQLzfzHU81Kc0X0g=w1280">
+    </div>
+</section>
+<section class="positionStatement">
+    <h1 style="color: #fff; text-align: center;">Position Statement</h1>
+    <p>My classroom is a positive environment where students can share, discuss, and debate ideas freely, honestly, and kindly. All students will be engaged in the learning process, including setting and reaching individual learning goals with help from their peers and from myself. The end goal is for all students to become better readers, writers, and critical thinkers.</p>
+    <p>In my classroom, I use PBIS strategies (Positive Behavioral Interventions and Support) to manage challenging behaviors and help students with academic difficulties flourish. I do not believe in most traditional punishments for challenging behaviors-- sending students to the office or suspending them does not teach them to act in a classroom-appropriate manner or give them the supports they need. PBIS strategies, such as providing a structured classroom routine, clear expectations, and active supervision, can stop challenging behaviors before they even begin. The most important aspect of PBIS, however, is regular assessment and evaluation. As a teacher, I am dedicated to continuously challenging my teaching strategies and only employing those methods which are best supported by the evidence. Every classroom is different, and thus every classroom management plan has to be tweaked as the year goes on, but I am confident in my ability to find strategies that work for every class and every student.</p>
+    <div class="round">
+        <img src="https://images.pexels.com/photos/5896423/pexels-photo-5896423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+    </div>
+</section>
+<section class="selStatement">
+	<h1 style="text-align: center;">Social and Emotional Learning in my Classroom</h1>
+<p>I am absolutely committed to integrating social-emotional learning into my classroom. One important goal of social-emotional learning, or SEL, at the high school level includes teaching students how to increase their level of independence, while maintaining mature and respectful relationships with others, including adults. Assigning collaborative projects and discussion topics that require students to work respectfully and empathetically with each other can help them develop more mature relationships with their peers. As my students develop these advanced relationship skills, they will eventually be able to generalize their new abilities in other areas of their life, including at home and at work. Additionally, I will model mature relationships for my students through my own behavior. By modeling kindness and empathy as an adult, I hope to encourage my students to interact with each other in positive and productive ways.</p>
+<p>Another approach which will integrate SEL in my classroom is teaching critical reading skills that promote independent thinking and, eventually, individuation. By teaching students how to read and analyze texts critically, I can help them develop their own interpretations and opinions, which can contribute to their sense of personal identity. Promoting a sense of individuality, rather than the group-based identity more common in younger students, can help my students develop better relationships with their peers and parents, while also maintaining emotional independence. To help my students begin developing their individual identities, I might give an assignment to reflect on a book we’re reading, find a moment that resonated with them personally, and then share their thoughts with the class. Encouraging this kind of personal reflection and expression can help my students in discovering their own unique voices and values.</p>
+
+<p>Integrating ethical discussions into my classroom also fosters SEL, though scaffolded with careful guidelines which encourage maturity and respect, regardless of whether students agree or disagree with each other. For example, I may assign prompts that ask students to consider ethical dilemmas from reading assignments and debate their viewpoints in small groups or as a class. By creating a space for students to discuss their opinions and beliefs, I hope to encourage them to develop and be able to articulate a personal ethical system to guide their behavior. An important part of adolescent emotional development is creating a personal system of beliefs to govern one’s behavior, rather than relying on values that parents, teachers, or other adults enforce. The development of an individual moral compass allows students to better make informed and empathetic decisions in their personal and academic lives. My ultimate aim is to foster a more empathetic and understanding classroom environment that supports responsible dialogue, where students can learn to understand each others’ beliefs.</p>
+</section>
+</body>
+<script>
+function sendEmail() 
+{
+    window.location = "mailto:rowanjgingras@gmail.com";
+}
+</script>
+</html>
