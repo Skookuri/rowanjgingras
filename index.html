@@ -27,6 +27,7 @@
 
     h1 {
         font-size: 45px;
+        
         font-weight: 300; /*light font weight*/
     }
 
@@ -90,23 +91,72 @@
     }
     
     .intro {
-        display: flex;
+        /*display: flex;
         justify-content: center;
-        flex-direction: row;
+        flex-direction: row-reverse;
+        align-content: stretch;*/
         padding: 0;
+        content: "";
+  		clear: both;
+  		display: table;
+        position: relative;
+        
     }
     
     .infoContent {
         padding: 20px;
+		width: 75%;
+    }
+    
+	.waveyThing {
+  		margin-right: 23vw;
+  		background-color: #fff;
+  		--mask:
+    		radial-gradient(102.45px at calc(100% - 144.00px) 50%,#000 99%,#0000 101%) 0 calc(50% - 160px)/100% 320px,
+    		radial-gradient(102.45px at calc(100% + 64.00px) 50%,#0000 99%,#000 101%) calc(100% - 80px) 50%/100% 320px repeat-y;
+  		-webkit-mask: var(--mask);
+  		mask: var(--mask);
+  
+	}
+
+    
+    
+    .profilePic {
+    	margin: 0;
+        width: fit-content;
+        /*border: 5px solid red;
+        background-image: url("https://skookuri.github.io/rowanjgingras/rowangingrasheadshot.jpeg");
+        background-repeat: no-repeat;
+        background-size: fill;
+        background-attachment: fixed;
+        background-position: right top;*/
+        z-index: -200;
+        float: right;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 50vw;
+        
     }
     
     .profilePic img {
+        position: relative;
         height: 100%;
+        object-fit: fill;
+        width: auto;
+        margin: 0;
     }
+    
+    /*@media screen and (min-width: 1000px) {
+    	.profilePic img {
+        	width: 500px;
+        }
+    }*/
     
     .positionStatement {
         background-color: var(--purple);
         color: #fff;
+        position: relative;
     }
     
     .rowEmail {
@@ -118,6 +168,7 @@
         border-radius: 25px;
         width: fit-content;
         cursor: pointer;
+        display: inline-block;
     }
 
     .rowEmail:hover {
@@ -139,6 +190,70 @@
         height: 100%;
         object-fit: cover;
     }
+    
+    .custom-shape-divider-bottom-1689139172 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: 200;
+}
+
+.custom-shape-divider-bottom-1689139172 svg {
+    position: relative;
+    display: block;
+    width: calc(117% + 1.3px);
+    height: 85px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1689139172 .shape-fill {
+    fill: #FFFFFF;
+}
+
+    .secondThing {
+    position: absolute;
+    
+    left: 0px;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(-90deg);
+    /*bottom: 0;*/
+    z-index: 200;
+}
+
+.secondThing svg {
+    position: relative;
+    display: block;
+    width: calc(117% + 1.3px);
+    height: 85px;
+    transform: rotateY(180deg);
+}
+
+.secondThing .shape-fill {
+    fill: #FFFFFF;
+}
+
+/*.attemptTwo {
+	border: 5px solid green; position: absolute; top: 0; right: 10px; z-index: 300;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 200;
+}
+
+.attemptTwo svg {
+	position: relative;
+    display: block;
+    height: calc(70% + 1.3px);
+    
+    
+}*/
 
 </style>
 </head>
@@ -153,15 +268,33 @@
     </ul>
 </div>
 <section class="intro">
-    <div class="infoContent">
-        <h1>Hi, I'm<h1 style="font-weight: normal">Rowan Gingras.</h1></h1>
-        <p>I will be graduating from the University of Maine in 2024 with dual degrees in English and Secondary Education. Through college, I've worked as a Behavioral Health Professional, working one-on-one with disabled children to help them meet their goals and live more independent lives. My experience has given me a unique understanding of the struggles adolescents, both disabled and not, experience in the classroom. This website will show my comprehensive classroom management plan-- how I approach classroom routines, lesson plans, and contingencies for disruptive behaviors.</p>
-        <h2>Get in touch at <span class="rowEmail" onclick="sendEmail()">rowanjgingras@gmail.com</span></h2>
-    </div>
-    <div class="profilePic" >
-        <img src="https://skookuri.github.io/rowanjgingras/rowangingrasheadshot.jpeg">
+    <div class="waveyThing">
+    	<div class="infoContent">
+        	<h1><span style="display: inline-block; margin-right: 13px;">Hi, I'm</span><span style="display: inline-block; font-weight: normal;">Rowan Gingras.</span></h1>
+
+        	<p>Through college, I've worked as a Behavioral Health Professional, working one-on-one with disabled children to help them meet their goals and live more independent lives. My experience has given me a unique understanding of the struggles adolescents, both disabled and not, experience in the classroom. This website will show my comprehensive classroom management plan-- how I approach classroom routines, lesson plans, and contingencies for disruptive behaviors.</p>
+        	<p>I will be graduating from the University of Maine in 2024 with dual degrees in English and Secondary Education.</p>
+        	<h2>Get in touch at <span class="rowEmail" onclick="sendEmail()">rowanjgingras@gmail.com</span></h2>
+    	</div>
+        <!--div class="attemptTwo">
+	<svg id="visual" viewBox="0 0 300 600"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="900" height="600" fill="transparent"></rect>
+		<path opacity=".25" d="M264 0L253.8 20C243.7 40 223.3 80 228.8 120C234.3 160 265.7 200 255 240C244.3 280 191.7 320 163.2 360C134.7 400 130.3 440 141.8 480C153.3 520 180.7 560 194.3 580L208 600L0 600L0 580C0 560 0 520 0 480C0 440 0 400 0 360C0 320 0 280 0 240C0 200 0 160 0 120C0 80 0 40 0 20L0 0Z" fill="#fff"></path>
+		<path opacity=".5" d="M96 0L116.7 20C137.3 40 178.7 80 175.3 120C172 160 124 200 112.3 240C100.7 280 125.3 320 146.7 360C168 400 186 440 177.2 480C168.3 520 132.7 560 114.8 580L97 600L0 600L0 580C0 560 0 520 0 480C0 440 0 400 0 360C0 320 0 280 0 240C0 200 0 160 0 120C0 80 0 40 0 20L0 0Z" fill="#e0e0e0"></path>
+		<path d="M131 0L136.2 20C141.3 40 151.7 80 149.2 120C146.7 160 131.3 200 119.2 240C107 280 98 320 98 360C98 400 107 440 96.5 480C86 520 56 560 41 580L26 600L0 600L0 580C0 560 0 520 0 480C0 440 0 400 0 360C0 320 0 280 0 240C0 200 0 160 0 120C0 80 0 40 0 20L0 0Z" fill="#ffffff"></path></svg>
+</div-->
+<!--div class="secondThing">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+    </svg-->
+	</div>
+    <div class="profilePic">
+    	<img src="https://skookuri.github.io/rowanjgingras/rowangingrasheadshot.jpeg">
     </div>
 </section>
+
+</div>
 <section class="positionStatement">
     <h1 style="color: #fff; text-align: center;">Position Statement</h1>
     <p>My classroom is a positive environment where students can share, discuss, and debate ideas freely, honestly, and kindly. All students will be engaged in the learning process, including setting and reaching individual learning goals with help from their peers and from myself. The end goal is for all students to become better readers, writers, and critical thinkers.</p>
@@ -169,6 +302,14 @@
     <div class="round">
         <img src="https://images.pexels.com/photos/5896423/pexels-photo-5896423.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
     </div>
+    <div class="custom-shape-divider-bottom-1689139172">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+    </svg>
+</div>
+</div>
 </section>
 <section class="selStatement">
     <h1 style="text-align: center;">Social and Emotional Learning in my Classroom</h1>
@@ -178,9 +319,41 @@
 </section>
 </body>
 <script>
-function sendEmail() 
-{
-    window.location = "mailto:rowanjgingras@gmail.com";
-}
+    const waveyThing = document.querySelector('.waveyThing');
+    let maskPositionX = 0;
+    let maskPositionY = 0;
+    let maskPositionZ = 0;
+    let increasing = true;
+
+    function animateMask() {
+        if (increasing) {
+            maskPositionX += 1;
+            maskPositionY += 1;
+            maskPositionZ += 10;
+        } else {
+            maskPositionX -= 1;
+            maskPositionY -= 1;
+            maskPositionZ -= 10;
+        }
+
+        waveyThing.style.setProperty('--mask', `
+            radial-gradient(${93.30 + maskPositionX}px at calc(100% - ${128.00 + maskPositionY}px) 50%,#000 99%,#0000 101%) 0 calc(50% - 160px)/100% 320px,
+            radial-gradient(${93.30 + maskPositionX}px at calc(100% + ${48.00 + maskPositionZ}px) 50%,#0000 99%,#000 101%) calc(100% - 80px) 50%/100% 320px repeat-y
+        `);
+
+        if (increasing && maskPositionX >= 64 && maskPositionY >= 16 && maskPositionZ >= 88) {
+            increasing = false;
+        } else if (!increasing && maskPositionX <= 0 && maskPositionY <= 0 && maskPositionZ <= 0) {
+            increasing = true;
+        }
+
+        requestAnimationFrame(animateMask);
+    }
+
+    //animateMask();
+    
+    function sendEmail() {
+        window.location = "mailto:rowanjgingras@gmail.com";
+    }
 </script>
 </html>
