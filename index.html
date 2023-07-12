@@ -70,9 +70,11 @@
         width: 100%;
         overflow: hidden;
         text-align: center;
-        z-index: 100;
+        z-index: 300;
         padding-bottom: 10px;
         padding-top: 10px;
+        /*position: fixed;*/
+        
         
     }
     
@@ -102,70 +104,87 @@
         margin: 0;
         padding: 30px;
         position: relative;
+        z-index: 100;
     }
     
     .intro {
-        /*display: flex;
-        justify-content: center;
-        flex-direction: row-reverse;
-        align-content: stretch;*/
+    	display: grid;
+        grid-template-columns: auto auto;
+    	align-items: center;
         padding: 0;
-        content: "";
-  		clear: both;
-  		display: table;
-        position: relative;
-        
-    }
-    
-    .infoContent {
-        padding: 20px;
-		width: 75%;
-    }
-    
+        justify-items: end;
+        align-items: stretch;
+    	justify-content: space-between;
+	}
+
 	.waveyThing {
-  		margin-right: 23vw;
-  		background-color: #fff;
-  		--mask:
+    	display: flex;
+    	justify-content: center;
+    	background-color: #fff;
+        justify-items: end;
+        height: fit-content;
+        align-items: stretch;
+    	justify-content: space-between;
+	}
+
+	.infoContent {
+    	padding: 20px;
+        height: fit-content;
+
+	}
+
+	.profilePic {
+    	margin: 0;
+    	/*width: 100%;
+    	max-width: calc(100% - 340px);*/
+        z-index: -200;
+        display: flex;
+    	justify-content: center;
+    	align-items: center;
+        background-image: url("https://skookuri.github.io/rowanjgingras/rowangingrasheadshot.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: center;
+        width: 50vw;
+        
+        
+	}
+    
+    @media screen and (max-width: 600px) {
+    	.profilePic {
+        	display: none;
+        }
+        
+        .infoContent {
+        	text-align: center;
+        }
+    }
+
+	.profilePic img {
+    	
+    	height: 250px;
+        border: 10px solid green;
+        /*margin: 0*/
+    	object-fit: cover;
+	}
+    
+   .infoContent {
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+	}
+   
+    
+    /*.waveyThing {
+    	  		--mask:
     		radial-gradient(102.45px at calc(100% - 144.00px) 50%,#000 99%,#0000 101%) 0 calc(50% - 160px)/100% 320px,
     		radial-gradient(102.45px at calc(100% + 64.00px) 50%,#0000 99%,#000 101%) calc(100% - 80px) 50%/100% 320px repeat-y;
   		-webkit-mask: var(--mask);
   		mask: var(--mask);
-  
-	}
-
-    
-    
-    .profilePic {
-    	margin: 0;
-        width: fit-content;
-        /*border: 5px solid red;
-        background-image: url("https://skookuri.github.io/rowanjgingras/rowangingrasheadshot.jpeg");
-        background-repeat: no-repeat;
-        background-size: fill;
-        background-attachment: fixed;
-        background-position: right top;*/
-        z-index: -200;
-        float: right;
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 50vw;
-        
-    }
-    
-    .profilePic img {
-        position: relative;
-        height: 100%;
-        object-fit: fill;
-        width: auto;
-        margin: 0;
-    }
-    
-    /*@media screen and (min-width: 1000px) {
-    	.profilePic img {
-        	width: 500px;
-        }
     }*/
+    
+    
     
     .positionStatement {
         background-color: var(--purple);
@@ -218,51 +237,50 @@
     }
     
     .custom-shape-divider-bottom-1689139172 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    z-index: 200;
-}
+    	position: absolute;
+    	bottom: 0;
+    	left: 0;
+    	width: 100%;
+    	overflow: hidden;
+    	line-height: 0;
+    	transform: rotate(180deg);
+    	z-index: 10;
+	}
 
-.custom-shape-divider-bottom-1689139172 svg {
-    position: relative;
-    display: block;
-    width: calc(117% + 1.3px);
-    height: 85px;
-    transform: rotateY(180deg);
-}
+	.custom-shape-divider-bottom-1689139172 svg {
+    	position: relative;
+    	display: block;
+    	width: calc(117% + 1.3px);
+    	height: 85px;
+    	transform: rotateY(180deg);
+	}
 
-.custom-shape-divider-bottom-1689139172 .shape-fill {
-    fill: #FFFFFF;
-}
+	.custom-shape-divider-bottom-1689139172 .shape-fill {
+    	fill: #FFFFFF;
+	}
 
     .secondThing {
-    position: absolute;
-    
-    left: 0px;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(-90deg);
-    /*bottom: 0;*/
-    z-index: 200;
-}
+    	position: absolute;
+    	left: 150px;
+    	width: 100%;
+    	overflow: hidden;
+    	line-height: 0;
+    	transform: rotate(-90deg);
+    	bottom: 210px;
+    	z-index: 200;
+	}
 
-.secondThing svg {
-    position: relative;
-    display: block;
-    width: calc(117% + 1.3px);
-    height: 85px;
-    transform: rotateY(180deg);
-}
+	.secondThing svg {
+    	position: relative;
+    	display: block;
+    	height: calc(117% + 1.3px);
+    	/*width: 85px;*/
+    	transform: rotateY(180deg);
+	}
 
-.secondThing .shape-fill {
-    fill: #FFFFFF;
-}
+	.secondThing .shape-fill {
+    	fill: #000000;
+	}
 
 /*.attemptTwo {
 	border: 5px solid green; position: absolute; top: 0; right: 10px; z-index: 300;
@@ -286,41 +304,33 @@
 <body>
 <div class="navbar">
     <ul>
-        <li><a href="/matrix">Classroom Matrix</a></li>
-        <li><a href="/routines">Classroom Routines</a></li>
+        <li><a href="/matrixroutines">Classroom Matrix/Routines</a></li>
         <li><a href="/continuum">Continuum of Consequences</a></li>
         <li><a href="/plan">Plans</a></li>
-        <li><a href="/other">Other</a></li>
     </ul>
 </div>
 <section class="intro">
     <div class="waveyThing">
     	<div class="infoContent">
         	<h1><span style="display: inline-block; margin-right: 13px;">Hi, I'm</span><span style="display: inline-block; font-weight: normal;">Rowan Gingras.</span></h1>
-
         	<p>Through college, I've worked as a Behavioral Health Professional, working one-on-one with disabled children to help them meet their goals and live more independent lives. My experience has given me a unique understanding of the struggles adolescents, both disabled and not, experience in the classroom. This website will show my comprehensive classroom management plan-- how I approach classroom routines, lesson plans, and contingencies for disruptive behaviors.</p>
         	<p>I will be graduating from the University of Maine in 2024 with dual degrees in English and Secondary Education.</p>
         	<h2>Get in touch at <span class="rowEmail" onclick="sendEmail()">rowanjgingras@gmail.com</span></h2>
     	</div>
-        <!--div class="attemptTwo">
-	<svg id="visual" viewBox="0 0 300 600"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="900" height="600" fill="transparent"></rect>
-		<path opacity=".25" d="M264 0L253.8 20C243.7 40 223.3 80 228.8 120C234.3 160 265.7 200 255 240C244.3 280 191.7 320 163.2 360C134.7 400 130.3 440 141.8 480C153.3 520 180.7 560 194.3 580L208 600L0 600L0 580C0 560 0 520 0 480C0 440 0 400 0 360C0 320 0 280 0 240C0 200 0 160 0 120C0 80 0 40 0 20L0 0Z" fill="#fff"></path>
-		<path opacity=".5" d="M96 0L116.7 20C137.3 40 178.7 80 175.3 120C172 160 124 200 112.3 240C100.7 280 125.3 320 146.7 360C168 400 186 440 177.2 480C168.3 520 132.7 560 114.8 580L97 600L0 600L0 580C0 560 0 520 0 480C0 440 0 400 0 360C0 320 0 280 0 240C0 200 0 160 0 120C0 80 0 40 0 20L0 0Z" fill="#e0e0e0"></path>
-		<path d="M131 0L136.2 20C141.3 40 151.7 80 149.2 120C146.7 160 131.3 200 119.2 240C107 280 98 320 98 360C98 400 107 440 96.5 480C86 520 56 560 41 580L26 600L0 600L0 580C0 560 0 520 0 480C0 440 0 400 0 360C0 320 0 280 0 240C0 200 0 160 0 120C0 80 0 40 0 20L0 0Z" fill="#ffffff"></path></svg>
-</div-->
-<!--div class="secondThing">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-    </svg-->
 	</div>
-    <div class="profilePic">
-    	<img src="https://skookuri.github.io/rowanjgingras/rowangingrasheadshot.jpeg">
+	<div class="profilePic">
+
     </div>
 </section>
+<!--section>
+	<div>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac iaculis tellus. Fusce ullamcorper lorem magna, in feugiat dolor rutrum vitae. Integer ac maximus augue. Duis et velit erat. Quisque commodo ex at pretium bibendum. Nam interdum dolor enim, quis porta turpis congue a. Suspendisse semper, turpis eu fringilla eleifend, metus eros venenatis enim, a maximus mi ex et turpis. Ut sed molestie augue. Praesent rhoncus ultrices dui quis pharetra. In aliquet sapien ac lacus laoreet molestie a ut diam. Vivamus quis sapien id lorem tempor auctor eu quis quam.
 
-</div>
+Vivamus laoreet libero tellus, consequat mattis lectus ornare in. Ut sagittis nisl lacus, vel hendrerit velit egestas id. Pellentesque pulvinar velit eu velit gravida imperdiet non a urna. Praesent ut risus et quam venenatis tristique eu vitae magna. Mauris sapien urna, eleifend in viverra nec, elementum in sapien. Suspendisse massa metus, finibus vulputate massa et, facilisis scelerisque eros. In risus mi, congue sit amet sollicitudin quis, aliquet eu sapien. Maecenas ac est dui. Aenean efficitur commodo justo et pulvinar. Cras aliquet ut mi pretium consequat.
+
+Aliquam tellus quam, laoreet id leo a, viverra auctor tellus. Morbi ut velit quis justo pharetra vehicula. Cras purus felis, eleifend quis nisl nec, blandit blandit lacus. Curabitur eu mollis felis, et feugiat urna. Donec ut massa ipsum. Curabitur elit nisi, varius vulputate nunc quis, efficitur consectetur massa. In egestas, velit vel commodo iaculis, felis augue elementum nulla, a tincidunt ante urna nec velit. Cras at odio sed massa porttitor pretium. Suspendisse pretium lectus eros, nec mollis orci convallis in. Cras ut urna in ex pellentesque sagittis at id magna.
+    </div>
+</section-->
 <section class="positionStatement">
     <h1 class="titleText" style="color: #fff;">Position Statement</h1>
     <p>My classroom is a positive environment where students can share, discuss, and debate ideas freely, honestly, and kindly. All students will be engaged in the learning process, including setting and reaching individual learning goals with help from their peers and from myself. The end goal is for all students to become better readers, writers, and critical thinkers.</p>
@@ -335,10 +345,9 @@
         <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
     </svg>
 </div>
-</div>
 </section>
 <section class="selStatement">
-    <h1 class="titleText">Social and Emotional Learning in my Classroom</h1>
+	<h1 class="titleText">Social and Emotional Learning in my Classroom</h1>
     <p>I am absolutely committed to integrating social-emotional learning into my classroom. One important goal of social-emotional learning, or SEL, at the high school level includes teaching students how to increase their level of independence, while maintaining mature and respectful relationships with others, including adults. Assigning collaborative projects and discussion topics that require students to work respectfully and empathetically with each other can help them develop more mature relationships with their peers. As my students develop these advanced relationship skills, they will eventually be able to generalize their new abilities in other areas of their life, including at home and at work. Additionally, I will model mature relationships for my students through my own behavior. By modeling kindness and empathy as an adult, I hope to encourage my students to interact with each other in positive and productive ways.</p>
     <p>Another approach which will integrate SEL in my classroom is teaching critical reading skills that promote independent thinking and, eventually, individuation. By teaching students how to read and analyze texts critically, I can help them develop their own interpretations and opinions, which can contribute to their sense of personal identity. Promoting a sense of individuality, rather than the group-based identity more common in younger students, can help my students develop better relationships with their peers and parents, while also maintaining emotional independence. To help my students begin developing their individual identities, I might give an assignment to reflect on a book we’re reading, find a moment that resonated with them personally, and then share their thoughts with the class. Encouraging this kind of personal reflection and expression can help my students in discovering their own unique voices and values.</p>
     <p>Integrating ethical discussions into my classroom also fosters SEL, though scaffolded with careful guidelines which encourage maturity and respect, regardless of whether students agree or disagree with each other. For example, I may assign prompts that ask students to consider ethical dilemmas from reading assignments and debate their viewpoints in small groups or as a class. By creating a space for students to discuss their opinions and beliefs, I hope to encourage them to develop and be able to articulate a personal ethical system to guide their behavior. An important part of adolescent emotional development is creating a personal system of beliefs to govern one’s behavior, rather than relying on values that parents, teachers, or other adults enforce. The development of an individual moral compass allows students to better make informed and empathetic decisions in their personal and academic lives. My ultimate aim is to foster a more empathetic and understanding classroom environment that supports responsible dialogue, where students can learn to understand each others’ beliefs.</p>
