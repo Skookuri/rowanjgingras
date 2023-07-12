@@ -219,6 +219,13 @@
         color: var(--purple);
         transition: 0.3s;
     }
+    
+    .rowName {
+    	display: inline-block; font-weight: normal;
+        border-bottom: 10px solid var(--secondary);
+    	height: 0.8em;
+    }
+    
 
     .round {
         border-radius: 50%;
@@ -389,10 +396,10 @@
 <section class="intro">
     <div class="waveyThing">
     	<div class="infoContent">
-        	<h1><span style="display: inline-block; margin-right: 13px;">Hi, I'm</span><span style="display: inline-block; font-weight: normal;">Rowan Gingras.</span></h1>
+        	<h1><span style="display: inline-block; margin-right: 13px;">Hi, I'm</span><span class="rowName">Rowan Gingras.</span></h1>
         	<p>Through college, I've worked as a Behavioral Health Professional, working one-on-one with disabled children to help them meet their goals and live more independent lives. My experience has given me a unique understanding of the struggles adolescents, both disabled and not, experience in the classroom. This website will show my comprehensive classroom management plan-- how I approach classroom routines, lesson plans, and contingencies for disruptive behaviors.</p>
         	<p>I will be graduating from the University of Maine in 2024 with dual degrees in English and Secondary Education.</p>
-        	<h2>Get in touch at <span class="rowEmail" onclick="sendEmail()">rowanjgingras@gmail.com</span></h2>
+        	<h2>Get in touch at <span class="rowEmail" onclick="sendEmail()" style="margin-left: 3px;">rowanjgingras@gmail.com</span></h2>
     	</div>
 	</div>
 	<div class="profilePic">
