@@ -7,6 +7,8 @@
 <style>
     :root {
         --purple: #421867;
+        --secondary: #D4C8EE;
+        --accent: #6BB1D1;
     }
     
     html {
@@ -44,6 +46,8 @@
     }
     p {
         line-height: 25px;
+        font-size: 18px;
+        font-weight: 300;
         
     }
 
@@ -69,6 +73,7 @@
         z-index: 100;
         padding-bottom: 10px;
         padding-top: 10px;
+        
     }
     
     .navbar a {
@@ -165,14 +170,12 @@
     .positionStatement {
         background-color: var(--purple);
         color: #fff;
-        padding-bottom: 150px;
+        padding-bottom: 100px;
 
     }
     
     .selStatement {
     	background-color: #fff;
-        
-        
     }
     
     
@@ -199,7 +202,11 @@
         overflow: hidden; /* Ensures the image stays within the circle */
         width: 348px;
         height: 348px;
-        margin: 0 auto; /* Centers the image horizontally */
+        margin: 70px auto; /* Centers the image horizontally */
+        box-shadow:
+    -50px -50px 0 -40px rgba(212,200,238,0.7),
+    50px 50px 0 -40px var(--secondary);
+
         
     }
 
@@ -207,7 +214,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-
+         
     }
     
     .custom-shape-divider-bottom-1689139172 {
